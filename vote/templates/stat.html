@@ -1,0 +1,61 @@
+{%extends 'base.html'%}
+
+{%block content%}
+
+<style>
+    .jumbotron h1{
+        color:rgb(3, 145, 240);
+    }
+    .jumbotron{
+        background-image: none;
+        height:auto;
+        width: auto;
+        border: solid 2px black;
+    }
+    .bars{
+        background-color: black;
+        width:100px;
+        height:30px;
+        color:black;
+        align-items: center;
+
+    }
+    
+    
+</style>
+
+<div class="container">
+    <div class="jumbotron">
+        {%for i in parties%}
+        <p>{{i.name}}</p>
+            <div class="bars">
+                
+                <p style="margin-left:5px;color:white;">{{i.votes}}</p>
+            </div>
+            
+            <br>
+        {%endfor%}
+    </div>
+</div>
+
+<script>
+
+    var w = [];
+
+    {{widths}}.forEach(i=>{
+        w.push(i);
+    });
+    
+    console.log(w);
+    var eles = document.querySelectorAll(".bars");
+    var colors = ["#a685e2","#5eaaa8","#a6a9b6","#f37121","#e5707e","#111d5e","#65d6ce","#fdb827","#da9ff9","#61b15a","#892cdc","#892cdc"];
+    eles.forEach( (item,index)=>{
+        item.style.width = `${w[index]}px`;
+        var ii = Math.floor(Math.random() * 11) ;
+        item.style.backgroundColor = colors[ii];
+        
+    });
+
+</script>
+
+{%endblock%}

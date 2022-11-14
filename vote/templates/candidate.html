@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+{%block content%}
+<style>
+    .jumbotron{
+            background-image: none;
+            height:auto;
+        }
+</style>
+
+<div class="container">
+    <div class="jumbotron">
+        <center><img width=250px height=200px src="{{url_for('static',filename=candidate.candidate_url)}}" alt=""></center><br>
+        <center>
+            <h4>Candidate Name:</h4>
+            <bold>
+                <p>{{candidate.candidate_name}}</p>
+            </bold>
+            <h4>Age:</h4>
+            <p>{{candidate.age}}</p>
+            <h4>Party:</h4>  
+            <p>{{candidate.name}}</p>          
+        </center>
+    </div>
+</div>
+
+{%endblock%}

@@ -1,0 +1,39 @@
+{%extends 'base.html'%}
+{%block content%}
+
+<style>
+    .jumbotron h1{
+        color:rgb(3, 145, 240);
+    }
+    .jumbotron{
+        background-image: none;
+        height:auto;
+        width: auto;
+        border: solid 2px black;
+    }
+
+    a{
+        text-decoration: none;
+        color:white;
+    }
+    a:hover{
+        text-decoration: none;
+        color:white;
+    }
+    
+    
+</style>
+
+
+<div class="container">
+
+   <div class="jumbotron">
+    <center>
+        <img width=60px height=60px src="static/images/thumbs.png" alt=""><br><br>
+        <h4>YOU HAVE SUCCESSFULLY VOTED</h4>
+        <button type="button" class="btn btn-primary"><i class="fa fa-check" aria-hidden="true"></i><a href="{{url_for('index')}}">Finish</a></button>
+    </center>
+   </div>
+</div>
+
+{%endblock%}

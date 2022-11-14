@@ -1,0 +1,40 @@
+{%extends 'base.html'%}
+{%block content%}
+
+<style>
+    .jumbotron{
+        background-image: none;
+        height:auto;
+        width: auto;
+        background-color: white;
+    }
+    .combo{
+        position: relative;
+        left: 40%;
+        top: 50%;
+    }
+    input{
+        border:solid 2px black;
+        border-radius: 5px;
+        padding: 6px;
+    }
+</style>
+
+
+
+<div class="container">
+
+    <div class="combo">
+    <form action="{{url_for('login')}}" method="POST">
+      <h4 style="color:rgb(18, 129, 114)">Admin Login</h4><br>
+       <h6>Password : </h6>
+        <input type="password" id="al" name="admin_pass"><br><br>
+        <button type="submit" class="btn btn-primary">Login</button>
+    
+    </form>
+    </div>
+        
+
+</div>
+
+{%endblock%}
